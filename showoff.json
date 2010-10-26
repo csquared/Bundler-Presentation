@@ -1,0 +1,11 @@
+{ "name": "The Gem Bundler", 
+   "sections": 
+    [ 
+      {"section":"intro"},
+      {"section":"gemfile"},
+      {"section":"cli"},
+      {"section":"Bundler.setup"}, 
+      {"section":"np_complete"},
+      {"section":"fin"}
+    ]
+}
