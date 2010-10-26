@@ -180,7 +180,7 @@
 * DFS && Backtracking
 
 !SLIDE bullets incremental
-# Bundler BackTracking  
+# Bundler Resolving  
 ## Let's watch it..
 * ready
 * set

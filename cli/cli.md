@@ -126,7 +126,7 @@
 
 	$ bundle show bundler
 
-!SLIDE code small commandline incremental
+!SLIDE code small
 # open
 	$ bundle open
 	Open an installed gem in the editor
@@ -157,7 +157,7 @@
 	Generate a simple Gemfile, placed in 
 	the current directory
 
-!SLIDE code small commandline incremental
+!SLIDE code small 
 # gem
 	$ bundle gem test_gem
 	Create a simple gem, suitable for 
