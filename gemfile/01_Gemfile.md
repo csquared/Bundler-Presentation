@@ -125,10 +125,36 @@
 
 * A snapshot of the gem versions in current use, resolved from the Gemfile.
 
+!SLIDE code
+<pre>
+  GEM
+    remote: http://rubygems.org/
+    specs:
+      Platform (0.4.0)
+      actionmailer (2.3.9)
+        actionpack (= 2.3.9)
+      actionpack (2.3.9)
+        activesupport (= 2.3.9)
+        rack (~> 1.1.0)
+      activemerchant (1.5.1)
+  ...
+
+  PLATFORMS
+    ruby
+
+  DEPENDENCIES
+    activemerchant (= 1.5.1)
+    acts_as_list (= 0.1.2)
+    bluecloth (= 2.0.7)
+    builder (= 2.1.2)
+  ...
+</pre>
+
 !SLIDE bullets incremental
 # Gemfile.lock
 ## What is it really?
 
+* SOURCES
 * GEM
 * PLATFORMS
 * DEPENDENCIES
@@ -137,6 +163,7 @@
 !SLIDE code bullets incremental
 # Bundler::LockFileParser
 
+* parse_source
 * parse_spec
 * parse_platform
 * parse_dependency
@@ -165,27 +192,3 @@
 
 * makes your application a single package of both your own code and the third-party code it ran the last time you know for sure that everything worked. 
 
-!SLIDE code
-<pre>
-  GEM
-    remote: http://rubygems.org/
-    specs:
-      Platform (0.4.0)
-      actionmailer (2.3.9)
-        actionpack (= 2.3.9)
-      actionpack (2.3.9)
-        activesupport (= 2.3.9)
-        rack (~> 1.1.0)
-      activemerchant (1.5.1)
-  ...
-
-  PLATFORMS
-    ruby
-
-  DEPENDENCIES
-    activemerchant (= 1.5.1)
-    acts_as_list (= 0.1.2)
-    bluecloth (= 2.0.7)
-    builder (= 2.1.2)
-  ...
-</pre>
