@@ -49,7 +49,7 @@
 
 !SLIDE 
 <h1>
-  <a target="_blank" href="http://localhost:9090/image/cli/install.gif">
+  <a target="_blank" href="http://thebundler.heroku.com/image/cli/install.gif">
     Show Me
   </a>
 </h1>
