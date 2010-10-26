@@ -39,12 +39,6 @@
 	  #   can attack each other!   
 	end                                               
 
-!SLIDE 
-# The Constraint
-##  Generate a configuration of Queens
-##  so that none of them 
-##   can attack each other   
-
 !SLIDE code center 
 # Example N = 4
 <pre style="font-size:5em">
@@ -61,10 +55,18 @@
 !SLIDE 
 # Easy - Brute Force that shit!
 
+!SLIDE bullets incremental
+# Brute force
+
+* generate a solution
+* check that it is a solution
+* if not, repeat
+
 !SLIDE 
 # But before we do...
 
 !SLIDE center 
+# Define 'solution'
 ## (Clever Girl) 
 
 <pre>
@@ -103,18 +105,6 @@
 # Search (is AI)
 
 !SLIDE bullets incremental
-# New Terms
-
-* Search(able) Space - the "potential search tree"
-* (The Brute Force Solution)
-* Search(ed) Space - what gets searched 
-* (Better than Brute Force)
-
-!SLIDE 
-# AI 
-## "happens" when you do better than brute force.
-
-!SLIDE bullets incremental
 # 2 Ways to Search a Tree
 
 * Breadth-First Search
@@ -137,6 +127,18 @@
 
 !SLIDE 
 # What if we want to do better?
+
+!SLIDE bullets incremental
+# New Terms
+
+* Search(able) Space - the "potential search tree"
+* (The Brute Force Solution)
+* Search(ed) Space - what gets searched 
+* (Better than Brute Force)
+
+!SLIDE 
+# AI 
+## "happens" when you do better than brute force.
 
 !SLIDE center
 # BackTracking
@@ -199,16 +201,22 @@
      TO TEH CODEZ!! (line 161)
 </a></h1>
 
+!SLIDE bullets incremental
+# Best-First search
+
+* estimating the promise of node n by a "heuristic evaluation function f(n) which, in general, may depend on the description of n, the description of the goal, the information gathered by the search up to that point, and most important, on any extra knowledge about the problem domain." -Judea Pearl
+
 !SLIDE full-page  
 #Backtracking
 ![Backtracking](backtracking.png)
 
-!SLIDE
-#Backjumping
+!SLIDE full-page
+#Backjumping 
 ![Backjumping](backjumping.png)
 
 !SLIDE code
-# Back-Jumping with Catch/Throw
+# Back-Jumping with 
+# Catch/Throw
 	@@@ruby
 	result = catch(:success) do
 	  resolver.start(requirements)

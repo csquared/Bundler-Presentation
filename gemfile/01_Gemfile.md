@@ -80,6 +80,10 @@
 	  exit!
 	end if File.exist?(gemfile)
 
+## config/application.rb
+	@@@ruby
+	 Bundler.require(:default, Rails.env) if defined?(Bundler)
+
 
 !SLIDE 
 # Platforms
@@ -160,19 +164,33 @@
 * DEPENDENCIES
 * (more information)
 
-!SLIDE code bullets incremental
-# Bundler::LockFileParser
+!SLIDE bullets incremental
+# NOT Yaml
 
+* <code>Bundler::LockFileParser</code>
 * parse_source
 * parse_spec
 * parse_platform
 * parse_dependency
 
 !SLIDE bullets incremental
+# Gemfile
+
+* holds the DRY input
+* gem "rails"
+
+!SLIDE bullets incremental
+# Gemfile.lock
+
+* makes your application a single package of both your own code and the third-party code it ran the last time you know for sure that everything worked. 
+* rails -> actionmailer -> actionpack -> active_support && rack   
+
+!SLIDE bullets incremental
 # Other approaches
 
 * keeping the gems with the code
 * BUT - what about native extensions?
+* BUT - what about the future?
 
 !SLIDE bullets incremental
 # Other approaches
@@ -181,14 +199,7 @@
 * gems.each{ |g| `gem install #{g}` }
 * BUT - what about version changes?
 * BUT - what about dependencies?
+* BUT - what about the future?
 
-!SLIDE bullets incremental
-# Gemfile
-
-* holds the DRY input
-
-!SLIDE bullets incremental
-# Gemfile.lock
-
-* makes your application a single package of both your own code and the third-party code it ran the last time you know for sure that everything worked. 
-
+!SLIDE transition=fade bullets incremental
+![dependencies](gem_graph.png)

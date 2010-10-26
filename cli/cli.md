@@ -35,11 +35,14 @@
 	$ bundle install
 	Install the gems specified by the Gemfile or Gemfile.lock
 
+	$ bundle install --without production
+	bundler will remember 
+
 	$ bundle install --deployment
-	Installs gems to vendor/bundle
+	Used for deploys - installs to vendor/bundle
 
 !SLIDE bullets incremental 
-# Resolution
+## The Resolution on this thing is amazing...
 
 * Installer < Environment
 * Installer#run
@@ -60,11 +63,14 @@
 	$ bundle update
 	Update dependencies to their latest versions
 
+	$ bundle update gemname
+	Update gemname to its latest version
+
 !SLIDE code commandline incremental
 ## package
 	$ bundle package
 	Package the .gem files required by  your  application  into  the
-	vendor/cache directory
+	vendor/cache directory (so you can install without downloading)
 
 !SLIDE code commandline incremental
 ## exec
@@ -115,11 +121,10 @@
 	Show the source location of a particular gem 
 	in the bundle
 
-!SLIDE code small
-# console
-	$ bundle console
-	Start an IRB session in the context of the 
-	current bundle
+	$ bundle show rails
+	/usr/lib/ruby/gems/1.8/gems/rails-3.0.0
+
+	$ bundle show bundler
 
 !SLIDE code small commandline incremental
 # open
@@ -127,6 +132,12 @@
 	Open an installed gem in the editor
 
 	$ vim $(bundle show)
+
+!SLIDE code small
+# console
+	$ bundle console
+	Start an IRB session in the context of the 
+	current bundle
 
 !SLIDE code small
 # viz
@@ -146,8 +157,15 @@
 	Generate a simple Gemfile, placed in 
 	the current directory
 
-!SLIDE code small
+!SLIDE code small commandline incremental
 # gem
-	$ bundle gem
+	$ bundle gem test_gem
 	Create a simple gem, suitable for 
 	development with bundler
+
+	$ ls
+	Gemfile  lib  Rakefile  test_gem.gemspec
+
+	$ ls lib/
+	test_gem  test_gem.rb
+

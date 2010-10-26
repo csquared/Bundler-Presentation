@@ -2,17 +2,15 @@
 ![Bundler](gembundler.png)
 
 !SLIDE bullets incremental transition=fade
-* The good
-* The bad
-* And the ugly 
+* The easy
+* The hard
+* And the NP-complete
 
 !SLIDE center
 # ||
 
-!SLIDE bullets incremental transition=fade
-* The easy
-* The hard
-* And the NP-complete
+!SLIDE center
+# Don't shoot the messenger
 
 !SLIDE bullets incremental 
 # Who am I?
@@ -21,6 +19,9 @@
 * Master of One (Computer Science)
 * I like to make stuff
 * It's a Jersey thing 
+
+!SLIDE 
+# Back to...
 
 !SLIDE center 
 ![Bundler](the_bundler.jpg)
@@ -44,7 +45,7 @@
 
 
 !SLIDE transition=fade 
-# The hard #
+# The hard(er) 
 ## Use bundle gems instead of system gems
 
 !SLIDE code 
@@ -56,11 +57,13 @@
 	Bundler.setup
 	Bundler.require
 
-
 !SLIDE transition=fade 
 # The NP-Complete #
 ## Constraint Satisfaction 
-## (I can't get no...)
 
 !SLIDE transition=fade bullets incremental
 ![dependencies](gem_graph.png)
+
+!SLIDE center 
+## Haters gonna hate
+![shoot_messenger](shoot-messenger.jpg)
